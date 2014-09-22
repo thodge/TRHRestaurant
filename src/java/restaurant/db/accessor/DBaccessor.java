@@ -12,7 +12,7 @@ import restaurant.DataAccessException;
  *
  * @author Hodgey
  */
-public class DB_Generic {
+public class DBaccessor {
 
     private Connection conn;
 
@@ -290,7 +290,7 @@ public class DB_Generic {
     }
 
     public static void main(String[] args) throws IllegalArgumentException, SQLException, ClassNotFoundException, DataAccessException, Exception {
-        DB_Generic db = new DB_Generic();
+        DBaccessor db = new DBaccessor();
         db.openConnection("com.mysql.jdbc.Driver", "jdbc:mysql://localhost/Restaurant", "root", null);
         List<String> columns = new ArrayList<>();
 

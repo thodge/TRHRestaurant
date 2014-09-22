@@ -6,7 +6,7 @@ import restaurant.DataAccessException;
 import restaurant.dao.IMenuItemDAO;
 import restaurant.dao.MenuItem;
 import restaurant.dao.MenuItemsDAO;
-import restaurant.db.accessor.DB_Generic;
+import restaurant.db.accessor.DBaccessor;
 
 /**
  *
@@ -15,7 +15,7 @@ import restaurant.db.accessor.DB_Generic;
 public final class RestaurantService {
     private List<MenuItem> menuList;
     private restaurant.dao.IMenuItemDAO menuItemDAO;
-    private final DB_Generic db = new DB_Generic();
+    private final DBaccessor db = new DBaccessor();
     private final String dao = "restaurant.dao.IMenuItemDAO";
     public RestaurantService() throws Exception{
         initMenu(dao);

@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import restaurant.DataAccessException;
-import restaurant.db.accessor.DB_Generic;
+import restaurant.db.accessor.DBaccessor;
 
 /**
  *
@@ -13,20 +13,20 @@ import restaurant.db.accessor.DB_Generic;
  */
 public class MenuItemsDAO implements IMenuItemDAO{
 
-    private DB_Generic db;
+    private DBaccessor db;
     
     public MenuItemsDAO(){ 
     }
     
-    public MenuItemsDAO(DB_Generic db){
+    public MenuItemsDAO(DBaccessor db){
         setDb(db);
     }
 
-    public DB_Generic getDb() {
+    public DBaccessor getDb() {
         return db;
     }
 
-    public void setDb(DB_Generic db) {
+    public void setDb(DBaccessor db) {
         this.db = db;
     }
     /**
@@ -104,7 +104,7 @@ public class MenuItemsDAO implements IMenuItemDAO{
         return records;
     }
     public static void main(String[] args) throws DataAccessException, SQLException {
-        MenuItemsDAO midao = new MenuItemsDAO(new DB_Generic());
+        MenuItemsDAO midao = new MenuItemsDAO(new DBaccessor());
         midao.openLocalDbConnection();
         MenuItem mi = new MenuItem(1, "Water", 0.00);
         midao.addItemToMenu(mi);

@@ -1,4 +1,3 @@
-
 <%@page import="restaurant.service.RestaurantService"%>
 <%@page import="restaurant.dao.MenuItem"%>
 <%@page import="java.util.List"%>

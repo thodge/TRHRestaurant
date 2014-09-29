@@ -1,3 +1,4 @@
+
 package controller;
 
 import java.io.IOException;
@@ -17,9 +18,9 @@ import restaurant.service.RestaurantService;
  *
  * @author Hodgey
  */
-@WebServlet(name = "ProcessController", urlPatterns = {"/admin"})
+@WebServlet(name = "ProcessController", urlPatterns = {"/Admin"})
 public class ProcessController extends HttpServlet {
-private static final String RESULT_PAGE = "process.jsp";
+private static final String RESULT_PAGE = "admin.jsp";
 private static final String ADMIN_TODO = "toDo";
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

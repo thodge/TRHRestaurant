@@ -62,7 +62,7 @@ private static final String ADMIN_TODO = "toDo";
     try {
         processRequest(request, response);
     } catch (Exception ex) {
-        Logger.getLogger(AdminController.class.getName()).log(Level.SEVERE, null, ex);
+        Logger.getLogger(ProcessController.class.getName()).log(Level.SEVERE, null, ex);
     }
     }
 
@@ -80,7 +80,7 @@ private static final String ADMIN_TODO = "toDo";
     try {
         processRequest(request, response);
     } catch (Exception ex) {
-        Logger.getLogger(AdminController.class.getName()).log(Level.SEVERE, null, ex);
+        Logger.getLogger(ProcessController.class.getName()).log(Level.SEVERE, null, ex);
     }
     }
 
